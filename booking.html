@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Bookings</title>
+    <link rel="stylesheet" href="booking.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo-box">
+                <img src="assets1/images/lg.jpeg" alt="logo" class="logo-icon">
+                <span class="logo-text">Go Travel</span>
+            </div>
+
+            <!-- CSS Only Hamburger - No JavaScript Needed! -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="nav--links">
+                <a href="#">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Destination</a>
+                <a href="testimonial.html">Testimonial</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="#">Check weather</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="button--a">Sign Up</div>
+            <div class="button--a"><a href="booking.html">For Bookings</a></div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <main class="main-content">
+        <div class="container">
+            <div class="booking-form-wrapper">
+                <h1>For Bookings</h1>
+                
+                <form id="bookingForm">
+                    <!-- Route Selection -->
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="route">Route<span class="required">*</span></label>
+                            <select id="route" name="route" required>
+                                <option value="">*Please Select*</option>
+                                <option value="pakistan-bali">Pakistan to Bali</option>
+                                <option value="pakistan-dubai">Pakistan to Nusa,Indonesia</option>
+                                <option value="pakistan-turkey">Pakistan to Cook,New Zealand</option>
+                                <option value="pakistan-malaysia">Pakistan to Santorini,Greece</option>
+                                <option value="pakistan-thailand">Pakistan to Thailand</option>
+                                <option value="pakistan-maldives">Pakistan to Maldives</option>
+                                <option value="bali-pakistan">Bali to Pakistan</option>
+                                <option value="dubai-pakistan">Dubai to Pakistan</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Name Fields -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Name<span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" placeholder="First*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">&nbsp;</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Last*" required>
+                        </div>
+                    </div>
+
+                    <!-- Email and Phone -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email<span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                            <small class="help-text">We will send you a copy of the completed booking form to your e-mail address.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone<span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="### ### ####" required>
+                        </div>
+                    </div>
+
+                    <!-- Departure Date and Time -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="departureDate">Departure Date<span class="required">*</span></label>
+                            <input type="date" id="departureDate" name="departureDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="departureTime">Departure Time<span class="required">*</span></label>
+                            <input type="time" id="departureTime" name="departureTime" placeholder="HH:MM AM" required>
+                        </div>
+                    </div>
+
+                    <!-- Return Date and Time -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="returnDate">Return Date<span class="required">*</span></label>
+                            <input type="date" id="returnDate" name="returnDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="returnTime">Return Time<span class="required">*</span></label>
+                            <input type="time" id="returnTime" name="returnTime" placeholder="HH:MM AM" required>
+                        </div>
+                    </div>
+
+                    <!-- Number of Passengers -->
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="passengers">Number of passengers<span class="required">*</span></label>
+                            <select id="passengers" name="passengers" required>
+                                <option value="">*Please Select*</option>
+                                <option value="1">1 Passenger</option>
+                                <option value="2">2 Passengers</option>
+                                <option value="3">3 Passengers</option>
+                                <option value="4">4 Passengers</option>
+                                <option value="5">5 Passengers</option>
+                                <option value="6">6 Passengers</option>
+                                <option value="7">7 Passengers</option>
+                                <option value="8">8 Passengers</option>
+                                <option value="9">9 Passengers</option>
+                                <option value="10">10+ Passengers</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Verification -->
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label>Verification<span class="required">*</span></label>
+                            <div class="recaptcha-box">
+                                <input type="checkbox" id="verification" name="verification" required>
+                                <label for="verification" class="checkbox-label">I'm not a robot</label>
+                                <div class="recaptcha-logo">
+                                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="book-btn">BOOK</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="success-content">
+                <img src="https://cdn-icons-png.flaticon.com/512/5610/5610944.png" alt="Success" class="success-icon">
+                <h2>Booking Confirmed!</h2>
+                <p>Your application has been successfully submitted.</p>
+                <p class="booking-details">We will send you the booking details to your email address shortly.</p>
+                <button class="ok-btn" onclick="closeModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer--container">
+            <a href="#" class="footer--logo">
+                <div class="logo-box">
+                    <img src="assets1/images/lg.jpeg" alt="logo" class="logo-icon">
+                    <span class="logo-text">Go Travel</span>
+                </div>
+            </a>
+            
+            <div class="footer--content">
+                <div>
+                    <h3 class="footer--title">About</h3>
+                    <ul class="footer--links">
+                        <li><a href="#" class="footer--link">About Us</a></li>
+                        <li><a href="#" class="footer--link">Features</a></li>
+                        <li><a href="#" class="footer--link">News & Blogs</a></li>
+                    </ul>
+                </div>
+            
+                <div>
+                    <h3 class="footer--title">Contact</h3>
+                    <ul class="footer--links">
+                        <li><a href="#" class="footer--link">Cell Center</a></li>
+                        <li><a href="#" class="footer--link">Support</a></li>
+                        <li><a href="#" class="footer--link">Contact Us</a></li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3 class="footer--title">Support</h3>
+                    <ul class="footer--links">
+                        <li><a href="#" class="footer--link">Privacy policy</a></li>
+                        <li><a href="#" class="footer--link">Terms & Services</a></li>
+                        <li><a href="#" class="footer--link">Payments</a></li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3 class="footer--title">Social</h3>
+                    <div class="footer--social">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer--social-link">
+                            <i class="ri-facebook-circle-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer--social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer--social-link">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="footer--copy">
+            &#169; All Rights Reserved By The Visionary Devs
+        </span>
+    </footer>
+
+    <script src="booking.js"></script>
+</body>
+</html>
